@@ -5,9 +5,11 @@ import ImagePage from "@/layout/pages/ImagePage";
 import {
   ImagePageProps,
   TextColumnsPageProps,
+  TextMediaPageProps,
   TextPageProps,
 } from "@/models/page.interface";
 import TextColumnsPage from "@/layout/pages/TextColumnsPage";
+import TextMediaPage from "@/layout/pages/TextMediaPage";
 
 type Params = Promise<{ path: string }>;
 
@@ -38,12 +40,15 @@ export default async function Page({ params }: { params: Params }) {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+        <h1 className="text-7xl font-bold">{pageData?.name}</h1>
         {firstBlockType === "blockText" && blocks?.[0]?.content ? (
           <TextPage {...(pageData as TextPageProps)} />
         ) : firstBlockType === "blockImage" && blocks?.[0]?.content ? (
           <ImagePage {...(pageData as ImagePageProps)} />
         ) : firstBlockType === "blockTextColumns" && blocks?.[0]?.content ? (
           <TextColumnsPage {...(pageData as TextColumnsPageProps)} />
+        ) : firstBlockType === "blockTextMedia" && blocks?.[0]?.content ? (
+          <TextMediaPage {...(pageData as TextMediaPageProps)} />
         ) : null}
       </main>
     </div>

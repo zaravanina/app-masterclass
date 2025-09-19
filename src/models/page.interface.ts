@@ -37,6 +37,14 @@ export interface TextColumnsPageProps extends PageData {
   };
 }
 
+export interface TextMediaPageProps extends PageData {
+  properties: {
+    blocks?: {
+      items?: TextMediaBlockProps[];
+    };
+  };
+}
+
 export interface ImagePageProps extends PageData {
   properties: {
     blocks?: {
@@ -73,6 +81,21 @@ export interface TextColumnsBlockProps {
     properties: {
       backgroundColor?: string;
       textColumns?: { items: TextColumnType[] };
+    };
+  };
+}
+
+export interface TextMediaBlockProps {
+  content: {
+    contentType: "blockTextMedia";
+    id: string;
+    properties: {
+      backgroundColor?: string;
+      bodyText?: RichTextType;
+      headline?: string;
+      tagline?: string;
+      mediaPosition?: "Media Left" | "Media Right";
+      media?: { items: ImageInnerType[] };
     };
   };
 }

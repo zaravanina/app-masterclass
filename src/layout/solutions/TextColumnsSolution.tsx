@@ -11,7 +11,7 @@
               const { headline, bodyText, tagline } = column.content.properties;
               return (
                 <div key={column.content.id}>
-                  {headline && <h1>{headline}</h1>}
+                  {headline && <h2>{headline}</h2>}
                   {bodyText && <RichText {...bodyText}></RichText>}
                   {tagline && <h2>{tagline}</h2>}
                 </div>

@@ -12,7 +12,7 @@ const TextPage: FunctionComponent<TextPageProps> = (props): JSX.Element => {
         const { headline, bodyText } = properties || {};
         return (
           <div key={index} className="mb-8">
-            {headline && <h1>{headline}</h1>}
+            {headline && <h2>{headline}</h2>}
             {bodyText && <RichText {...bodyText}></RichText>}
           </div>
         );
