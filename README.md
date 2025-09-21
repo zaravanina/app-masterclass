@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Heydays Masterclass – Next.js + Umbraco Data Mapping
 
-## Getting Started
+This repository was created for a masterclass at Heydays where visiting students learned how we work with data coming from Umbraco in a Next.js environment.
 
-First, run the development server:
+The goal of the session was to practice mapping content blocks from Umbraco, working with given types, and learning how to handle arrays, objects, and conditional rendering in React.
 
-```bash
+⸻
+
+## 🚀 Getting Started
+
+Run the development server with your preferred package manager:
+
 npm run dev
+
 # or
+
 yarn dev
+
 # or
+
 pnpm dev
+
 # or
+
 bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser to see the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the project by modifying app/page.tsx or app/[...path]/page.tsx.
+Changes are reflected immediately thanks to hot reloading.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+⸻
 
-## Learn More
+## 📝 Exercises
 
-To learn more about Next.js, take a look at the following resources:
+Students were given predefined types and asked to implement the following tasks: 1. Text Block
+• Add a tagline to the text block. 2. Image Block
+• Add crop support to the image.
+• Add a caption below the image. 3. Text Columns Block
+• Map out all columns inside the block.
+• Display the columns next to each other. 4. Text + Image Block
+• Map through text/image combinations.
+• Respect the data indicating whether the image should appear on the left or right side.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+💡 Bonus task: Some blocks also contain a background color value in the data — implement conditional rendering to apply these styles.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+⸻
 
-## Deploy on Vercel
+## 🎯 Purpose of the Repo
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    •	Serve as a learning sandbox for students who attended the masterclass.
+    •	Provide a reference boilerplate for anyone who wants to start a Next.js project that integrates with Umbraco data.
+    •	Encourage exploration of how to:
+    •	Map and render dynamic content blocks.
+    •	Work with TypeScript types for structured content.
+    •	Use console logging to understand data shapes.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+⸻
+
+## 📚 Learn More
+
+    •	Next.js Documentation – framework features and API.
+    •	Umbraco Documentation – CMS details and integration guides.
+    •	Learn Next.js – interactive Next.js tutorial.
